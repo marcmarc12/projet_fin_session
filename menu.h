@@ -2,7 +2,7 @@
  * menu.h
  *
  *  Created on: 26 nov. 2019...
- *      Author: Marc-Antoine
+ *      Author: Marc-Antoine.
  */
 
 #include <iostream> //pour utiliser des éléments du c++

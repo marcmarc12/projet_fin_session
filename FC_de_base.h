@@ -2,7 +2,7 @@
  * FC_de_base.h
  *
  *  Created on: 21 oct. 2019...
- *      Author: Marc-Antoine
+ *      Author: Marc-Antoine.
  */
 
 #include <iostream>

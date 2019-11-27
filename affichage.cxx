@@ -2,7 +2,7 @@
  * affichage.cxx
  *
  *  Created on: 23 nov. 2019..
- *      Author: Marc-Antoine
+ *      Author: Marc-Antoine.
  */
 
 #include "affichage.h"
