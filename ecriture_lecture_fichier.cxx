@@ -23,7 +23,7 @@ string creation_fichier(int nom) {
 	cin >> emplacement_fichier;
 
 	enplacement_fichier_concatenation = emplacement_fichier;
-	emplacement_fichier = "Raport_finale/";
+	emplacement_fichier = "Rapport_finale/";
 	//emplacement_fichier += "Inventaires_";
 	emplacement_fichier += nom_fichier_tab[nom];
 	emplacement_fichier += enplacement_fichier_concatenation;
@@ -121,7 +121,6 @@ void lecture_fichier(string emplacement) {
 		if (a == 59) {
 			cout << endl << "Point virgule atteint" << endl;
 		} else {
-			c += a;
 			//cout << a << endl;
 			switch (a) {
 				case 48:
@@ -132,15 +131,9 @@ void lecture_fichier(string emplacement) {
 					break;
 				case 50:
 					b += a;
-					cout << endl << "b" << b;
-					c += b;
-					cout << endl << "c" << c;
 					break;
 				case 51:
 					b += a;
-					cout << endl << "b" << b;
-					c += b;
-					cout << endl << "c" << c;
 					break;
 				case 52:
 					b += a;
@@ -161,7 +154,7 @@ void lecture_fichier(string emplacement) {
 					b += a;
 					break;
 				default:
-					//c = b;
+					c = b;
 					cout << endl << c;
 					b.clear();
 					break;
