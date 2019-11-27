@@ -2,7 +2,7 @@
  * affichage.h
  *
  *  Created on: 23 nov. 2019
- *      Author: Marc-Antoine Boisvert..
+ *      Author: Marc-Antoine Boisvert....
  */
 
 #include <iostream> //pour utiliser des éléments du c++
