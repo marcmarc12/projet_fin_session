@@ -1,7 +1,7 @@
 /*
  * affichage.cxx
  *
- *  Created on: 23 nov. 2019.
+ *  Created on: 23 nov. 2019..
  *      Author: Marc-Antoine
  */
 

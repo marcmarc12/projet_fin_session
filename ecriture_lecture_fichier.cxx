@@ -63,7 +63,7 @@ void ecriture_fichier_produit_simple(string nom_produit, double masse,
 }
 
 /*
- * Cette fonction permet de faire l'ecriture des donnees pour des quantite en paquet.
+ * Cette fonction permet de faire l'ecriture des donnees pour des quantite en paquet..
  * Elle recoit en parametre : un string pour le nom du produit, un double pour la quantiter de paquet, un double pour la quantiter dans un paquet,
  * 		double pour les quantitees, un string pour l'uniter et un string pour l'emplacement du fichier.
  * 	Elle ne renvoie rien.

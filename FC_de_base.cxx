@@ -1,7 +1,7 @@
 /*
  * FC_de_base.cxx
  *
- *  Created on: 21 oct. 2019.
+ *  Created on: 21 oct. 2019..
  *      Author: Marc-Antoine
  */
 
