@@ -1,16 +1,17 @@
 /*
  * ecriture_lecture_fichier.cxx
  *
- *  Created on: 25 nov. 2019..
+ *  Created on: 25 nov. 2019.
  *      Author: Marc-Antoine Boisvert
  */
 
 #include "ecriture_lecture_fichier.h"
 #include "constant.h"
 
-void creation_nom_fichier(string emplacement_fichier, int nom) {
-
+void creation_nom_fichier(string &emplacement_fichier, int nom) {
 	string emplacement_fichier_concatenation;
+	cout << endl << endl << "La date sous ce format YYYY_MM_JJ : ";
+	cin >> emplacement_fichier;
 
 	emplacement_fichier_concatenation = emplacement_fichier;
 	emplacement_fichier = "Analyse/";
@@ -18,9 +19,7 @@ void creation_nom_fichier(string emplacement_fichier, int nom) {
 	emplacement_fichier += nom_fichier_tab[nom];
 	emplacement_fichier += emplacement_fichier_concatenation;
 	emplacement_fichier += ".txt";
-
 }
-
 /*
  * Cette fonction permet de créer le fichier utiliser.
  * Elle ne recoit rien en parametre.
@@ -31,19 +30,18 @@ string creation_fichier(int nom) {
 	string emplacement_fichier;
 
 	//Ouverture du fichier en mode ecriture
-
+	string emplacement_fichier_concatenation;
 	cout << endl << endl << "La date sous ce format YYYY_MM_JJ : ";
 	cin >> emplacement_fichier;
 
-	/*emplacement_fichier_concatenation = emplacement_fichier;
-	 emplacement_fichier = "Analyse/";
-	 //emplacement_fichier += "Inventaires_";
-	 emplacement_fichier += nom_fichier_tab[nom];
-	 emplacement_fichier += emplacement_fichier_concatenation;
-	 emplacement_fichier += ".txt";*/
-	creation_nom_fichier(emplacement_fichier, nom);
+	emplacement_fichier_concatenation = emplacement_fichier;
+	emplacement_fichier = "Analyse/";
+	//emplacement_fichier += "Inventaires_";
+	emplacement_fichier += nom_fichier_tab[nom];
+	emplacement_fichier += emplacement_fichier_concatenation;
+	emplacement_fichier += ".txt";
 
-	ofstream fichier(emplacement_fichier, ios::app);
+	ofstream fichier(emplacement_fichier);
 
 	//Verification si le fichier est ouvert
 
@@ -121,6 +119,13 @@ void ecriture_vente(string produit, double montant, string emplacement) {
 void lecture_fichier(string emplacement) {
 	string c;
 	string b;
+	creation_nom_fichier(emplacement, 0);
+
+	ifstream tailleFichier(emplacement);
+	tailleFichier.seekg(0, ios::end);
+	double taille = tailleFichier.tellg();
+	cout << endl << taille << endl;
+
 	ifstream lectureFichier(emplacement);
 	if (lectureFichier) {
 		cout << "\n Fichier ouvert";
@@ -128,7 +133,7 @@ void lecture_fichier(string emplacement) {
 		cout << "\n Fichier non ouvert";
 		//manque qqch
 	}
-	for (int i = 0; i < 100; i++) {
+	for (double i = 0; i < taille; i++) {
 		char a;
 
 		lectureFichier.get(a);

@@ -18,7 +18,7 @@ const string ingredients_tab[9] = { "Boeuf", "Pain", "Laitue", "Cheddar jaune",
 
 const string unite_tab[4] = { "Kg", "Unite", "Feuille", "Tranche" };
 
-const string nom_fichier_tab[4] = { "Inventaire_", "Achat_", "Vente_",
+const string nom_fichier_tab[4] = { "Inventaires_", "Achats_", "Ventes_",
 		"Analyse_" };
 
 const string produit_tab[5] = { "Big Mac", " 2 Cheese burger",
