@@ -14,7 +14,7 @@
  * Elle renvoie la string qui possede le nom et l'emplacement du fichier
  */
 string creation_fichier(int nom) {
-	string enplacement_fichier_concatenation;
+	string emplacement_fichier_concatenation;
 	string emplacement_fichier;
 
 	//Ouverture du fichier en mode ecriture
@@ -22,11 +22,11 @@ string creation_fichier(int nom) {
 	cout << endl << endl << "La date sous ce format YYYY_MM_JJ : ";
 	cin >> emplacement_fichier;
 
-	enplacement_fichier_concatenation = emplacement_fichier;
-	emplacement_fichier = "Rapport_finale/";
+	emplacement_fichier_concatenation = emplacement_fichier;
+	emplacement_fichier = "Analyse/";
 	//emplacement_fichier += "Inventaires_";
 	emplacement_fichier += nom_fichier_tab[nom];
-	emplacement_fichier += enplacement_fichier_concatenation;
+	emplacement_fichier += emplacement_fichier_concatenation;
 	emplacement_fichier += ".txt";
 
 	ofstream fichier(emplacement_fichier);
