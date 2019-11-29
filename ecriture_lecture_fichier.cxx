@@ -43,7 +43,7 @@ string creation_fichier(int nom) {
 	 emplacement_fichier += ".txt";*/
 	creation_nom_fichier(emplacement_fichier, nom);
 
-	ofstream fichier(emplacement_fichier);
+	ofstream fichier(emplacement_fichier, ios::app);
 
 	//Verification si le fichier est ouvert
 

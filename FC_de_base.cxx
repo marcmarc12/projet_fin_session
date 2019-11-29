@@ -6,7 +6,6 @@
  */
 
 #include "FC_de_base.h"
-//#include "Ligne.h"
 
 /*
  * Fonction qui convertie un string en entrer en un long double.
@@ -48,42 +47,6 @@ void Color(int couleurDuTexte, int couleurDeFond) // fonction d'affichage de cou
 }
 
 /*
- * Fonction qui permet un affichage de base des resultats
- */
-/*string affichage_de_base(long double nb_a_afficher) {
- cout << endl << "Le resultat est " << nb_a_afficher << endl;
- return "";
- }*/
-
-/*
- * Fonction qui permet de choisir l<emplacement ou le fichier sera enregistrer
- */
-/*string emplacement_fichier() {
- int nb_repetition_pour_emplacement_fichier = 0;
- nb_repetition_pour_emplacement_fichier++;
- string emplacement_fichier;
- if (nb_repetition_pour_emplacement_fichier != 1) {
-
- //cout <<  << endl;
- //Color(14, 0);
- cout << emplacement_fichier << endl;
- //Color(0, 0);
- return emplacement_fichier;
- //std :: exit;
- }
-
- cout << endl
- << "Entrer l'emplacement ou le fichier de resultat sera enregistrer."
- << endl
- << "Par exemple : C:/Users/User/Desktop/Resultat_Dev_2019-10-04.txt "
- << endl << endl << "Votre emplacement : ";
- cin >> emplacement_fichier;
-
- return emplacement_fichier;
-
- }*/
-
-/*
  * FOnction qui permet de faire afficher un messsage et de renvoyer un la variable entrer
  */
 void input(string message, double &variable) {
@@ -92,6 +55,13 @@ void input(string message, double &variable) {
 	//while (valide != 1) {
 	cout << endl << message;
 	cin >> variable;
+	if (cin.fail()) {
+		cin.clear();
+		cin.ignore(INT_MAX, '\n');
+		cout << endl << "Vous avez rentrer un nombre non valide" << endl
+				<< endl;
+
+	}
 
 	//verification(valide);
 
@@ -99,19 +69,3 @@ void input(string message, double &variable) {
 	//return variable;
 }
 
-/*
- * Fonction qui permet de verifier si le nombre entrer est valide
- */
-void verification(int &valide) {
-	//Color(14, 0);
-
-	if (cin.fail()) {
-		cin.clear();
-		cin.ignore(INT_MAX, '\n');
-		cout << endl << "Vous avez rentrer un nombre non valide" << endl
-				<< endl;
-		valide = 0;
-	} else {
-		valide++;
-	}
-}

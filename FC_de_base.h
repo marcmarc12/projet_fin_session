@@ -52,22 +52,8 @@ long double Conversion_string(string nb_recu);
 void Color(int couleurDuTexte, int couleurDeFond);
 
 /*
- * Fonction qui permet un affichage de base des resultats
- */
-string affichage_de_base(long double nb_a_afficher);
-
-/*
- * Fonction qui permet de choisir l<emplacement ou le fichier sera enregistrer
- */
-//string emplacement_fichier();
-/*
  * FOnction qui permet de faire afficher un messsage et de renvoyer un la variable entrer
  */
 void input(string message, double &variable);
-
-/*
- * Fonction qui permet de verifier si le nombre entrer est valide
- */
-void verification(int &valide);
 
 #endif /* FC_DE_BASE_H_ */
