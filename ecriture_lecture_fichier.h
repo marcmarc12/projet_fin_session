@@ -16,6 +16,8 @@ using namespace std;
 #ifndef ECRITURE_LECTURE_FICHIER_H_
 #define ECRITURE_LECTURE_FICHIER_H_
 
+void creation_nom_fichier(string emplacement, int nom);
+
 /*
  * Cette fonction permet de créer le fichier utiliser.
  * Elle recoit le debut du nom du fichier en parametre avec un int

@@ -8,19 +8,9 @@
 #include "ecriture_lecture_fichier.h"
 #include "constant.h"
 
-/*
- * Cette fonction permet de créer le fichier utiliser.
- * Elle ne recoit rien en parametre.
- * Elle renvoie la string qui possede le nom et l'emplacement du fichier
- */
-string creation_fichier(int nom) {
+void creation_nom_fichier(string emplacement_fichier, int nom) {
+
 	string emplacement_fichier_concatenation;
-	string emplacement_fichier;
-
-	//Ouverture du fichier en mode ecriture
-
-	cout << endl << endl << "La date sous ce format YYYY_MM_JJ : ";
-	cin >> emplacement_fichier;
 
 	emplacement_fichier_concatenation = emplacement_fichier;
 	emplacement_fichier = "Analyse/";
@@ -28,6 +18,30 @@ string creation_fichier(int nom) {
 	emplacement_fichier += nom_fichier_tab[nom];
 	emplacement_fichier += emplacement_fichier_concatenation;
 	emplacement_fichier += ".txt";
+
+}
+
+/*
+ * Cette fonction permet de créer le fichier utiliser.
+ * Elle ne recoit rien en parametre.
+ * Elle renvoie la string qui possede le nom et l'emplacement du fichier
+ */
+string creation_fichier(int nom) {
+
+	string emplacement_fichier;
+
+	//Ouverture du fichier en mode ecriture
+
+	cout << endl << endl << "La date sous ce format YYYY_MM_JJ : ";
+	cin >> emplacement_fichier;
+
+	/*emplacement_fichier_concatenation = emplacement_fichier;
+	 emplacement_fichier = "Analyse/";
+	 //emplacement_fichier += "Inventaires_";
+	 emplacement_fichier += nom_fichier_tab[nom];
+	 emplacement_fichier += emplacement_fichier_concatenation;
+	 emplacement_fichier += ".txt";*/
+	creation_nom_fichier(emplacement_fichier, nom);
 
 	ofstream fichier(emplacement_fichier);
 
