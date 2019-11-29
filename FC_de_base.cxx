@@ -1,8 +1,8 @@
 /*
  * FC_de_base.cxx
  *
- *  Created on: 21 oct. 2019....
- *      Author: Marc-Antoine
+ *  Created on: 21 oct. 2019......
+ *      Author: Marc-Antoine.
  */
 
 #include "FC_de_base.h"

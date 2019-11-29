@@ -2,7 +2,7 @@
  * input.cxx
  *
  *  Created on: 25 nov. 2019...
- *      Author: Marc-Antoine Boisvert
+ *      Author: Marc-Antoine Boisvert.
  */
 
 #include "input.h"
