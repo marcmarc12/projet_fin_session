@@ -30,16 +30,7 @@ string creation_fichier(int nom) {
 	string emplacement_fichier;
 
 	//Ouverture du fichier en mode ecriture
-	string emplacement_fichier_concatenation;
-	cout << endl << endl << "La date sous ce format YYYY_MM_JJ : ";
-	cin >> emplacement_fichier;
-
-	emplacement_fichier_concatenation = emplacement_fichier;
-	emplacement_fichier = "Analyse/";
-	//emplacement_fichier += "Inventaires_";
-	emplacement_fichier += nom_fichier_tab[nom];
-	emplacement_fichier += emplacement_fichier_concatenation;
-	emplacement_fichier += ".txt";
+	creation_nom_fichier(emplacement_fichier, nom);
 
 	ofstream fichier(emplacement_fichier);
 
@@ -116,15 +107,19 @@ void ecriture_vente(string produit, double montant, string emplacement) {
 	ecritureAchat << produit << ";" << montant << endl;
 }
 
-void lecture_fichier(string emplacement) {
+void lecture_fichier() {
 	string c;
 	string b;
+	string emplacement;
+	string qt[100];
+
 	creation_nom_fichier(emplacement, 0);
 
 	ifstream tailleFichier(emplacement);
 	tailleFichier.seekg(0, ios::end);
 	double taille = tailleFichier.tellg();
 	cout << endl << taille << endl;
+	tailleFichier.close();
 
 	ifstream lectureFichier(emplacement);
 	if (lectureFichier) {
@@ -137,8 +132,19 @@ void lecture_fichier(string emplacement) {
 		char a;
 
 		lectureFichier.get(a);
-		if (a == 59) {
-			cout << endl << "Point virgule atteint" << endl;
+		if (a == 59 || a == 40 || a == 41) {
+			switch (a) {
+				case 59:
+					cout << endl << "Point virgule atteint" << endl;
+					break;
+				case 40:
+					cout << endl << "Paranthese atteint" << endl;
+					break;
+				case 41:
+					cout << endl << "Paranthese atteint" << endl;
+					break;
+			}
+
 		} else {
 			//cout << a << endl;
 			switch (a) {
@@ -176,6 +182,7 @@ void lecture_fichier(string emplacement) {
 					c = b;
 					cout << endl << c;
 					b.clear();
+					c.clear();
 					break;
 			}
 		}

@@ -86,7 +86,7 @@ int main(int argc, char **argv) {
 			}
 
 			case 4:
-				lecture_fichier(emplacement_fichier_inventaire);
+				lecture_fichier();
 				break;
 
 			default:
