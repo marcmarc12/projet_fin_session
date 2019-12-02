@@ -7,6 +7,7 @@
 
 #include "ecriture_lecture_fichier.h"
 #include "constant.h"
+#include "affichage.h"
 
 void creation_nom_fichier(string &emplacement_fichier, int nom) {
 	string emplacement_fichier_concatenation;
@@ -32,7 +33,7 @@ string creation_fichier(int nom) {
 	//Ouverture du fichier en mode ecriture
 	creation_nom_fichier(emplacement_fichier, nom);
 
-	ofstream fichier(emplacement_fichier);
+	ofstream fichier(emplacement_fichier, ios::app);
 
 	//Verification si le fichier est ouvert
 
@@ -112,6 +113,8 @@ void lecture_fichier() {
 	string b;
 	string emplacement;
 	string qt[100];
+	string test[600];
+	int pointeur_test = 0;
 
 	creation_nom_fichier(emplacement, 0);
 
@@ -132,16 +135,38 @@ void lecture_fichier() {
 		char a;
 
 		lectureFichier.get(a);
-		if (a == 59 || a == 40 || a == 41) {
+		//test[pointeur_test] = a;
+		if (a == 59 || a == 40 || a == 41 || a == 0 || a == 44) {
 			switch (a) {
+				case 0:
+					c.clear();
+					b.clear();
 				case 59:
 					cout << endl << "Point virgule atteint" << endl;
+					pointeur_test = pointeur_test + 1;
+					test[pointeur_test] = b;
+					//b.clear();
 					break;
 				case 40:
 					cout << endl << "Paranthese atteint" << endl;
+					pointeur_test = pointeur_test + 1;
+					test[pointeur_test] = b;
+					//c = b;
+					b.clear();
 					break;
 				case 41:
 					cout << endl << "Paranthese atteint" << endl;
+					pointeur_test = pointeur_test + 1;
+					test[pointeur_test] = b;
+					//c = b;
+					b.clear();
+					break;
+				case 44:
+					cout << endl << "Virgule atteint" << endl;
+					pointeur_test = pointeur_test + 1;
+					test[pointeur_test] = b;
+					//c = b;
+					b.clear();
 					break;
 			}
 
@@ -150,42 +175,64 @@ void lecture_fichier() {
 			switch (a) {
 				case 48:
 					b += a;
+					//test[pointeur_test] = a;
+					cout << endl << b;
 					break;
 				case 49:
 					b += a;
+					//test[pointeur_test] = a;
+					cout << endl << b;
 					break;
 				case 50:
 					b += a;
+					//test[pointeur_test] = a;
+					cout << endl << b;
 					break;
 				case 51:
 					b += a;
+					cout << endl << b;
 					break;
 				case 52:
 					b += a;
+					cout << endl << b;
 					break;
 				case 53:
 					b += a;
+					cout << endl << b;
 					break;
 				case 54:
 					b += a;
+					cout << endl << b;
 					break;
 				case 55:
 					b += a;
+					cout << endl << b;
 					break;
 				case 56:
 					b += a;
+					cout << endl << b;
 					break;
 				case 57:
 					b += a;
+					cout << endl << b;
 					break;
+					/*case 44:
+					 cout << endl << "Virgule atteint" << endl;
+					 pointeur_test = pointeur_test + 1;
+					 b += ".";
+					 //c = b;
+					 b.clear();
+					 break;*/
 				default:
 					c = b;
-					cout << endl << c;
+
+					cout << endl << b;
 					b.clear();
-					c.clear();
+					//c.clear();
 					break;
 			}
 		}
 		//cout << endl << c;
 	}
+	test_affichage(test);
 }

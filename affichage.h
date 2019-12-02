@@ -18,4 +18,6 @@ using namespace std;
 
 void logo();
 
+void test_affichage(string tab[600]);
+
 #endif /* AFFICHAGE_H_ */

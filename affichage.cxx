@@ -80,3 +80,9 @@ void logo() {
 	}
 	Color(15, 0);
 }
+
+void test_affichage(string tab[600]) {
+	for (int i = 0; i < 255; i++) {
+		cout << tab[i] << endl;
+	}
+}
