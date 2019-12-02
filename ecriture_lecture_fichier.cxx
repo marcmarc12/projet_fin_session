@@ -163,10 +163,11 @@ void lecture_fichier() {
 					break;
 				case 44:
 					cout << endl << "Virgule atteint" << endl;
-					pointeur_test = pointeur_test + 1;
-					test[pointeur_test] = b;
+					//pointeur_test = pointeur_test + 1;
+					b += ".";
+					//test[pointeur_test] = b;
 					//c = b;
-					b.clear();
+					//b.clear();
 					break;
 			}
 
