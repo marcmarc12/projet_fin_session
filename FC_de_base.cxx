@@ -8,16 +8,6 @@
 #include "FC_de_base.h"
 
 /*
- * Fonction qui convertie un string en entrer en un long double.
- */
-long double Conversion_string(string nb_recu) {
-	long double cast;
-	stringstream a(nb_recu);
-	a >> (cast);
-	return cast;
-}
-
-/*
  * Fonction qui permet d'afficher des couleur
  * Color(Couleur du texte, Couleur de Fond
  * Source : https://www.developpez.net/forums/d309614/c-cpp/c/couleurs-c/

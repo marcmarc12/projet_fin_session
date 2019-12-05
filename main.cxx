@@ -10,6 +10,7 @@
 #include "menu.h"
 #include "constant.h"
 #include "input.h"
+#include "Fonction_pour_projet.h"
 
 using namespace std;
 

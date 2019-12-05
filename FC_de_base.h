@@ -25,7 +25,6 @@ using namespace std;
 /*
  * Fonction qui convertie un string en entrer en un long double.
  */
-long double Conversion_string(string nb_recu);
 
 /*
  * Fonction qui permet d'afficher des couleur
