@@ -81,8 +81,16 @@ void logo() {
 	Color(15, 0);
 }
 
-void test_affichage(string tab[600]) {
-	for (int i = 0; i < 255; i++) {
+/*void test_affichage(string tab[500], unsigned long long int taille) {
+ for (int i = 0; i < taille; i++) {
+ cout << tab[i] << endl;
+ }
+ }*/
+
+void test_affichage(string tab[50], int quantite) {
+	for (int i = 0; i < quantite + 2; i++) {
+		//for (int j = 0; j < 15; j++) {
 		cout << tab[i] << endl;
+		//}
 	}
 }

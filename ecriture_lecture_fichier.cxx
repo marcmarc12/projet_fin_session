@@ -112,9 +112,10 @@ void lecture_fichier() {
 	string c;
 	string b;
 	string emplacement;
-	string qt[100];
-	string test[600];
-	int pointeur_test = 0;
+	string nb[50];
+	int nb_chiffre = 0;
+	//string test[600];
+	int position_nb = 0;
 
 	creation_nom_fichier(emplacement, 0);
 
@@ -143,21 +144,25 @@ void lecture_fichier() {
 					b.clear();
 				case 59:
 					cout << endl << "Point virgule atteint" << endl;
-					pointeur_test = pointeur_test + 1;
-					test[pointeur_test] = b;
+					position_nb++;
+					nb[position_nb] = b;
+					nb_chiffre++;
 					//b.clear();
 					break;
 				case 40:
 					cout << endl << "Paranthese atteint" << endl;
-					pointeur_test = pointeur_test + 1;
-					test[pointeur_test] = b;
+					position_nb++;
+					;
+					nb[position_nb] = b;
 					//c = b;
+					nb_chiffre++;
 					b.clear();
 					break;
 				case 41:
 					cout << endl << "Paranthese atteint" << endl;
-					pointeur_test = pointeur_test + 1;
-					test[pointeur_test] = b;
+					position_nb++;
+					nb[position_nb] = b;
+					nb_chiffre++;
 					//c = b;
 					b.clear();
 					break;
@@ -235,5 +240,6 @@ void lecture_fichier() {
 		}
 		//cout << endl << c;
 	}
-	test_affichage(test);
+	cout << endl << endl << nb_chiffre;
+	test_affichage(nb, nb_chiffre);
 }

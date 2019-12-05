@@ -10,7 +10,6 @@
 #include <math.h>   //permet des calculs plus poussés.
 #include <stdlib.h> //pour utiliser : NULL, EXIT_FAILURE, etc.
 #include <fstream>
-#include <vector>
 
 using namespace std;
 
@@ -47,5 +46,6 @@ void ecriture_fichier_paquet(string nom_produit, double quantite_paquet,
 void ecriture_vente(string produit, double montant, string emplacement);
 
 void lecture_fichier();
+//void verification(char tab[500], double taille);
 
 #endif /* ECRITURE_LECTURE_FICHIER_H_ */
