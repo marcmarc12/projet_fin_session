@@ -25,8 +25,11 @@ int main(int argc, char **argv) {
 	double choix = 0;
 
 	double inventaire[40];
+	int taille_inventaire = 0;
 	double achat[40];
+	int taille_achat = 0;
 	double vente[40];
+	int taille_vente = 0;
 
 	logo();
 
@@ -91,9 +94,12 @@ int main(int argc, char **argv) {
 			}
 
 			case 4:
-				lecture_fichier(0, inventaire);
-				lecture_fichier(1, achat);
-				lecture_fichier(2, vente);
+				lecture_fichier(0, inventaire, taille_inventaire);
+				//cout << endl << "Taille inventaire : " << taille_inventaire;
+				lecture_fichier(1, achat, taille_achat);
+				//cout << endl << "Taille achat : " << taille_achat;
+				lecture_fichier(2, vente, taille_vente);
+				//cout << endl << "Taille vente : " << taille_vente;
 				break;
 
 			default:

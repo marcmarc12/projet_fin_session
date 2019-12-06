@@ -33,7 +33,8 @@ unsigned long long int analyse_grosseur(string emplacement) {
 	return taille;
 }
 
-void lecture_fichier(int choix_fichier, double tableau[40]) {
+void lecture_fichier(int choix_fichier, double tableau[40],
+		int &quantite_chiffre) {
 	string b;
 	string emplacement;
 	string nb[50];
@@ -135,19 +136,20 @@ void lecture_fichier(int choix_fichier, double tableau[40]) {
 			}
 		}
 	}
-	pre_filtrage(nb, nb_chiffre, tableau);
+	pre_filtrage(nb, nb_chiffre, tableau, quantite_chiffre);
 }
 //}
 
-void pre_filtrage(string nb[50], int quantite, double tableau[40]) {
-	int nb_correct = 0;
+void pre_filtrage(string nb[50], int quantite, double tableau[40],
+		int &quantite_chiffre) {
+	//int nb_correct = 0;
 	for (int i = 0; i < quantite + 2; i++) {
 		//double b = 0;
 		//cout << endl << endl << "Le nombre recu : " << nb[i];
 		if (nb[i].size() != 0) {
 			tableau[i] = Conversion_string(nb[i]);
 			cout << endl << "Conversion de : " << tableau[i];
-			nb_correct++;
+			quantite_chiffre++;
 		}
 	}
 //cout << endl << endl << "La quantite de nb correct : " << nb_correct;
