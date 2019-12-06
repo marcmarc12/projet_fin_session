@@ -7,7 +7,6 @@
 
 #include "Fonction_pour_projet.h"
 #include "constant.h"
-#include "FC_de_base.h"
 
 //A retirer plus tard
 #include "affichage.h"

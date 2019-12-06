@@ -1,15 +1,7 @@
-#include <iostream> //pour utiliser des éléments du c++
-#include <string>   //pour utiliser des "string"...
-#include <math.h>   //permet des calculs plus poussés.
-#include <stdlib.h> //pour utiliser : NULL, EXIT_FAILURE, etc.
-#include <fstream>
 
 #include "affichage.h"
-#include "FC_de_base.h"
-#include "ecriture_lecture_fichier.h"
 #include "menu.h"
 #include "constant.h"
-#include "input.h"
 #include "Fonction_pour_projet.h"
 
 using namespace std;
@@ -33,67 +25,67 @@ int main(int argc, char **argv) {
 
 	logo();
 
-	while (choix != 5) {
+	while (choix != 2) {
 
 		menu();
 		input("Votre choix : ", choix);
 
 		switch (int(choix)) {
 
-			case 1: {
-				double choix2 = 0;
-				if (valide == 0) {
-					emplacement_fichier_inventaire = creation_fichier(0);
-					valide++;
-				}
-				menu_inventaire();
-				input("Votre choix : ", choix2);
+			/*case 1: {
+			 double choix2 = 0;
+			 if (valide == 0) {
+			 emplacement_fichier_inventaire = creation_fichier(0);
+			 valide++;
+			 }
+			 menu_inventaire();
+			 input("Votre choix : ", choix2);
 
-				switch (int(choix2)) {
+			 switch (int(choix2)) {
 
-					case 1:
-						input_simple(emplacement_fichier_inventaire);
-						break;
-					case 2:
-						input_paquet(emplacement_fichier_inventaire, 1);
-						break;
-				}
+			 case 1:
+			 input_simple(emplacement_fichier_inventaire);
+			 break;
+			 case 2:
+			 input_paquet(emplacement_fichier_inventaire, 1);
+			 break;
+			 }
 
-				break;
-			}
+			 break;
+			 }
 
-			case 2: {
-				double choix2 = 0;
-				if (valide2 == 0) {
-					emplacement_fichier_achat = creation_fichier(1);
-					valide2++;
-				}
-				menu_inventaire();
-				input("Votre choix : ", choix2);
+			 case 2: {
+			 double choix2 = 0;
+			 if (valide2 == 0) {
+			 emplacement_fichier_achat = creation_fichier(1);
+			 valide2++;
+			 }
+			 menu_inventaire();
+			 input("Votre choix : ", choix2);
 
-				switch (int(choix2)) {
+			 switch (int(choix2)) {
 
-					case 1:
-						input_simple(emplacement_fichier_achat);
-						break;
-					case 2:
-						input_paquet(emplacement_fichier_achat, 0);
-						break;
-				}
+			 case 1:
+			 input_simple(emplacement_fichier_achat);
+			 break;
+			 case 2:
+			 input_paquet(emplacement_fichier_achat, 0);
+			 break;
+			 }
 
-				break;
-			}
+			 break;
+			 }
 
-			case 3: {
-				if (valide3 == 0) {
-					emplacement_fichier_vente = creation_fichier(2);
-					valide3++;
-				}
+			 case 3: {
+			 if (valide3 == 0) {
+			 emplacement_fichier_vente = creation_fichier(2);
+			 valide3++;
+			 }
 
-				input_vente(emplacement_fichier_vente);
-			}
+			 input_vente(emplacement_fichier_vente);
+			 }*/
 
-			case 4:
+			case 1:
 				lecture_fichier(0, inventaire, taille_inventaire);
 				//cout << endl << "Taille inventaire : " << taille_inventaire;
 				lecture_fichier(1, achat, taille_achat);

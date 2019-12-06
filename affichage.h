@@ -6,10 +6,12 @@
  */
 
 #include <iostream> //pour utiliser des éléments du c++
-#include <string>   //pour utiliser des "string"
-#include <math.h>   //permet des calculs plus poussés
+#include <string>   //pour utiliser des "string"...
+#include <math.h>   //permet des calculs plus poussés.
 #include <stdlib.h> //pour utiliser : NULL, EXIT_FAILURE, etc.
 #include <fstream>
+#include <time.h>
+#include <windows.h>
 
 using namespace std;
 

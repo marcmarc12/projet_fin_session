@@ -6,7 +6,6 @@
  */
 
 #include "affichage.h"
-#include "FC_de_base.h"
 #include "constant.h"
 
 /*void logo() {

@@ -23,25 +23,4 @@ using namespace std;
  */
 void menu();
 
-/*
- * Cette fonction permet d'afficher le menu pour l'enregistrement des quantitees restant.
- * Elle ne recoit rien.
- * Elle renvoit rien.
- */
-void menu_inventaire();
-
-/*
- * Cette fonction permet d'afficher tout les ingredients.
- */
-void ingredients();
-
-/*
- * Cette fonction permet d'afficher toutes les unites
- */
-void unite();
-
-/*
- * Cette fonction permet d'afficher tout les produit disponnible a la vente
- */
-void produit();
 #endif /* MENU_H_ */
