@@ -34,16 +34,25 @@ void input(string message, double &variable) {
 	//return variable;
 }
 
-void creation_nom_fichier(string &emplacement_fichier, int nom) {
+void creation_nom_fichier(string &emplacement_fichier, int nom, string date[5],
+		int &date_deja_rentrer) {
 	string emplacement_fichier_concatenation;
-	cout << endl << endl << "La date sous ce format YYYY_MM_JJ : ";
-	cin >> emplacement_fichier;
+	if (date_deja_rentrer == 0 || date_deja_rentrer == 1) {
+		cout << endl << endl << "La date sous ce format YYYY MM JJ : ";
+		cin >> date[0] >> date[2] >> date[4];
+		date_deja_rentrer++;
+	}
+	for (int i = 0; i < 5; i++) {
+		//int posi[3] = { 0, 2, 4 };
+		emplacement_fichier_concatenation += date[i];
+	}
 
-	emplacement_fichier_concatenation = emplacement_fichier;
+	//emplacement_fichier_concatenation += date[i];
 	emplacement_fichier = "Analyse/";
 	emplacement_fichier += nom_fichier_tab[nom];
 	emplacement_fichier += emplacement_fichier_concatenation;
 	emplacement_fichier += ".txt";
+	cout << endl << emplacement_fichier;
 }
 
 unsigned long long int analyse_grosseur(string emplacement) {
@@ -56,7 +65,7 @@ unsigned long long int analyse_grosseur(string emplacement) {
 }
 
 void lecture_fichier(int choix_fichier, double tableau[40],
-		int &quantite_chiffre) {
+		int &quantite_chiffre, string date[5], int &date_deja_rentrer) {
 	string b;
 	string emplacement;
 	string nb[50];
@@ -65,7 +74,7 @@ void lecture_fichier(int choix_fichier, double tableau[40],
 	unsigned long long int taille = 0;
 	//for (int c = 0; c < 3; c++) {
 
-	creation_nom_fichier(emplacement, choix_fichier);
+	creation_nom_fichier(emplacement, choix_fichier, date, date_deja_rentrer);
 
 	taille = analyse_grosseur(emplacement);
 
@@ -79,33 +88,40 @@ void lecture_fichier(int choix_fichier, double tableau[40],
 		char a;
 		lectureFichier.get(a);
 
-		if (a == 59 || a == 40 || a == 41 || a == 0 || a == 44) {
+		if (a == 59 || a == 40 || a == 41 || a == 0 || a == 44 || a == 10) {
 			switch (a) {
 				case 0:
 					b.clear();
 					break;
+				case 10:
+					if (choix_fichier == 2) {
+						nb[position_nb] = b;
+						nb_chiffre++;
+					}
+					b.clear();
+					break;
 				case 59:
-					cout << endl << "Point virgule atteint" << endl;
+					//cout << endl << "Point virgule atteint" << endl;
 					position_nb++;
 					nb[position_nb] = b;
 					nb_chiffre++;
 					break;
 				case 40:
-					cout << endl << "Paranthese atteint" << endl;
+					//cout << endl << "Paranthese atteint" << endl;
 					position_nb++;
 					nb[position_nb] = b;
 					nb_chiffre++;
 					b.clear();
 					break;
 				case 41:
-					cout << endl << "Paranthese atteint" << endl;
+					//cout << endl << "Paranthese atteint" << endl;
 					position_nb++;
 					nb[position_nb] = b;
 					nb_chiffre++;
 					b.clear();
 					break;
 				case 44:
-					cout << endl << "Virgule atteint" << endl;
+					//cout << endl << "Virgule atteint" << endl;
 					b += ".";
 					break;
 			}
@@ -114,43 +130,43 @@ void lecture_fichier(int choix_fichier, double tableau[40],
 			switch (a) {
 				case 48:
 					b += a;
-					cout << endl << b;
+					//cout << endl << b;
 					break;
 				case 49:
 					b += a;
-					cout << endl << b;
+					//cout << endl << b;
 					break;
 				case 50:
 					b += a;
-					cout << endl << b;
+					//cout << endl << b;
 					break;
 				case 51:
 					b += a;
-					cout << endl << b;
+					//cout << endl << b;
 					break;
 				case 52:
 					b += a;
-					cout << endl << b;
+					//cout << endl << b;
 					break;
 				case 53:
 					b += a;
-					cout << endl << b;
+					//cout << endl << b;
 					break;
 				case 54:
 					b += a;
-					cout << endl << b;
+					//cout << endl << b;
 					break;
 				case 55:
 					b += a;
-					cout << endl << b;
+					//cout << endl << b;
 					break;
 				case 56:
 					b += a;
-					cout << endl << b;
+					//cout << endl << b;
 					break;
 				case 57:
 					b += a;
-					cout << endl << b;
+					//cout << endl << b;
 					break;
 				default:
 					b.clear();

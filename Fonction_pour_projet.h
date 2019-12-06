@@ -24,11 +24,12 @@ using namespace std;
 void input(string message, double &variable);
 
 void lecture_fichier(int choix_fichier, double tableau[40],
-		int &quantite_chiffre);
+		int &quantite_chiffre, string date[5], int &date_deja_rentrer);
 
 unsigned long long int analyse_grosseur(string emplacement);
 
-void creation_nom_fichier(string &emplacement_fichier, int nom);
+void creation_nom_fichier(string &emplacement_fichier, int nom, string date[5],
+		int &date_deja_rentrer);
 
 void pre_filtrage(string nb[50], int quantite, double tableau[40],
 		int &quantite_chiffre);

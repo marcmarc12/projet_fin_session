@@ -45,6 +45,6 @@ void logo();
 void Color(int couleurDuTexte, int couleurDeFond);
 
 //void test_affichage(string tab[500], unsigned long long int taille);
-void test_affichage(string tab[50], int quantite);
+void test_affichage(double tab[40], int quantite);
 
 #endif /* AFFICHAGE_H_ */

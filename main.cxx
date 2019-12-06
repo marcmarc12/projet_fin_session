@@ -1,4 +1,3 @@
-
 #include "affichage.h"
 #include "menu.h"
 #include "constant.h"
@@ -8,13 +7,15 @@ using namespace std;
 
 int main(int argc, char **argv) {
 
-	string emplacement_fichier_inventaire;
-	int valide = 0;
-	string emplacement_fichier_achat;
-	int valide2 = 0;
-	string emplacement_fichier_vente;
-	int valide3 = 0;
+	/*string emplacement_fichier_inventaire;
+	 int valide = 0;
+	 string emplacement_fichier_achat;
+	 int valide2 = 0;
+	 string emplacement_fichier_vente;
+	 int valide3 = 0;*/
 	double choix = 0;
+	string date[5] = { "", "_", "", "_", "" };
+	int date_rentrer = 0;
 
 	double inventaire[40];
 	int taille_inventaire = 0;
@@ -86,12 +87,16 @@ int main(int argc, char **argv) {
 			 }*/
 
 			case 1:
-				lecture_fichier(0, inventaire, taille_inventaire);
+				lecture_fichier(0, inventaire, taille_inventaire, date,
+						date_rentrer);
 				//cout << endl << "Taille inventaire : " << taille_inventaire;
-				lecture_fichier(1, achat, taille_achat);
+				lecture_fichier(1, achat, taille_achat, date, date_rentrer);
 				//cout << endl << "Taille achat : " << taille_achat;
-				lecture_fichier(2, vente, taille_vente);
+				lecture_fichier(2, vente, taille_vente, date, date_rentrer);
 				//cout << endl << "Taille vente : " << taille_vente;
+				test_affichage(inventaire, taille_inventaire);
+				test_affichage(achat, taille_achat);
+				test_affichage(vente, taille_vente);
 				break;
 
 			default:

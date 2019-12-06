@@ -115,8 +115,8 @@ void Color(int couleurDuTexte, int couleurDeFond) // fonction d'affichage de cou
  }
  }*/
 
-void test_affichage(string tab[50], int quantite) {
-	for (int i = 0; i < quantite + 2; i++) {
+void test_affichage(double tab[40], int quantite) {
+	for (int i = 0; i < quantite; i++) {
 		//for (int j = 0; j < 15; j++) {
 		cout << tab[i] << endl;
 		//}

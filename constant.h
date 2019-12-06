@@ -24,6 +24,7 @@ const string nom_fichier_tab[4] = { "Inventaires_", "Achats_", "Ventes_",
 const string produit_tab[5] = { "Big Mac", " 2 Cheese burger",
 		"Quart de livre avec fromage", "Double Quart de livre avec fromage",
 		"Bacon Club House" };
+const double prix_produit[5] = { 5.23, 2.62, 4.96, 6.27, 5.88 };
 
 #ifndef CONSTANT_H_
 #define CONSTANT_H_
