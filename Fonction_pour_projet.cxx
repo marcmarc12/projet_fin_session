@@ -12,6 +12,29 @@
 //A retirer plus tard
 #include "affichage.h"
 
+/*
+ * FOnction qui permet de faire afficher un messsage et de renvoyer un la variable entrer
+ */
+void input(string message, double &variable) {
+	//int valide = 0;
+	//long double variable = 0;
+	//while (valide != 1) {
+	cout << endl << message;
+	cin >> variable;
+	if (cin.fail()) {
+		cin.clear();
+		cin.ignore(INT_MAX, '\n');
+		cout << endl << "Vous avez rentrer un nombre non valide" << endl
+				<< endl;
+
+	}
+
+	//verification(valide);
+
+	//}
+	//return variable;
+}
+
 void creation_nom_fichier(string &emplacement_fichier, int nom) {
 	string emplacement_fichier_concatenation;
 	cout << endl << endl << "La date sous ce format YYYY_MM_JJ : ";

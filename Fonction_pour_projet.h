@@ -18,6 +18,11 @@ using namespace std;
 #ifndef FONCTION_POUR_PROJET_H_
 #define FONCTION_POUR_PROJET_H_
 
+/*
+ * FOnction qui permet de faire afficher un messsage et de renvoyer un la variable entrer
+ */
+void input(string message, double &variable);
+
 void lecture_fichier(int choix_fichier, double tableau[40],
 		int &quantite_chiffre);
 
