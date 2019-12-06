@@ -24,6 +24,8 @@ int main(int argc, char **argv) {
 	int valide3 = 0;
 	double choix = 0;
 
+	double inventaire[40];
+
 	logo();
 
 	while (choix != 5) {
@@ -87,7 +89,7 @@ int main(int argc, char **argv) {
 			}
 
 			case 4:
-				lecture_fichier();
+				lecture_fichier(0, inventaire);
 				break;
 
 			default:

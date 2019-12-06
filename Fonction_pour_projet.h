@@ -17,11 +17,13 @@ using namespace std;
 #ifndef FONCTION_POUR_PROJET_H_
 #define FONCTION_POUR_PROJET_H_
 
-void lecture_fichier();
+void lecture_fichier(int choix_fichier, double tableau[40]);
+
+unsigned long long int analyse_grosseur(string emplacement);
 
 void creation_nom_fichier(string &emplacement_fichier, int nom);
 
-void pre_filtrage(string nb[50], int quantite);
+void pre_filtrage(string nb[50], int quantite, double tableau[40]);
 
 /*
  * Fonction qui convertie un string en entrer en un long double.
