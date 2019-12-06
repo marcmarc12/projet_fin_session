@@ -25,6 +25,8 @@ int main(int argc, char **argv) {
 	double choix = 0;
 
 	double inventaire[40];
+	double achat[40];
+	double vente[40];
 
 	logo();
 
@@ -90,6 +92,8 @@ int main(int argc, char **argv) {
 
 			case 4:
 				lecture_fichier(0, inventaire);
+				lecture_fichier(1, achat);
+				lecture_fichier(2, vente);
 				break;
 
 			default:
