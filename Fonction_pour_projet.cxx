@@ -36,10 +36,12 @@ void input(string message, double &variable) {
 
 void creation_nom_fichier(string &emplacement_fichier, int nom, string date[5],
 		int &date_deja_rentrer) {
+	double hier;
 	string emplacement_fichier_concatenation;
 	if (date_deja_rentrer == 0 || date_deja_rentrer == 1) {
 		cout << endl << endl << "La date sous ce format YYYY MM JJ : ";
 		cin >> date[0] >> date[2] >> date[4];
+		//hier = Conversion_string(date[4]) - 1
 		date_deja_rentrer++;
 	}
 	for (int i = 0; i < 5; i++) {
@@ -47,7 +49,7 @@ void creation_nom_fichier(string &emplacement_fichier, int nom, string date[5],
 		emplacement_fichier_concatenation += date[i];
 	}
 
-	//emplacement_fichier_concatenation += date[i];
+//emplacement_fichier_concatenation += date[i];
 	emplacement_fichier = "Analyse/";
 	emplacement_fichier += nom_fichier_tab[nom];
 	emplacement_fichier += emplacement_fichier_concatenation;
@@ -72,7 +74,7 @@ void lecture_fichier(int choix_fichier, double tableau[40],
 	int nb_chiffre = 0;
 	int position_nb = 0;
 	unsigned long long int taille = 0;
-	//for (int c = 0; c < 3; c++) {
+//for (int c = 0; c < 3; c++) {
 
 	creation_nom_fichier(emplacement, choix_fichier, date, date_deja_rentrer);
 
@@ -180,7 +182,7 @@ void lecture_fichier(int choix_fichier, double tableau[40],
 
 void pre_filtrage(string nb[50], int quantite, double tableau[40],
 		int &quantite_chiffre) {
-	//int nb_correct = 0;
+//int nb_correct = 0;
 	for (int i = 0; i < quantite + 2; i++) {
 		//double b = 0;
 		//cout << endl << endl << "Le nombre recu : " << nb[i];
@@ -202,3 +204,38 @@ double Conversion_string(string nb_recu) {
 	a >> (cast);
 	return cast;
 }
+
+void traitement(double inventaire[40], int taille_inventaire, double achat[40],
+		int taille_achat, double vente[40], int taille_vente) {
+
+	double uboeuf = 0;
+	double upain = 0;
+	double ulaitue = 0;
+	double ucheddar_jaune = 0;
+	double ucheddar_blanc = 0;
+	double ucornichon = 0;
+	double uoignon = 0;
+	double utomate = 0;
+	double usauce = 0;
+
+	uboeuf = ((achat[0] / 5.23) * 90.8) / 1000; /*((achat[0] / 5.23) * 90.8 + (achat[1] / 2.62) * 90.8
+	 + (achat[2] / 4.96) * 113 + (achat[3] / 6.27) * 226
+	 + (achat[4] / 5.88) * 113) / 1000;*/
+
+	cout << "boeuf" << uboeuf;
+
+	uboeuf = ((achat[1] / 2.62) * 90.8) / 1000;
+	cout << "boeuf" << uboeuf;
+
+	uboeuf = ((achat[2] / 4.96) * 113) / 1000;
+	cout << "boeuf" << uboeuf;
+
+	uboeuf = ((achat[3] / 6.27) * 226) / 1000;
+	cout << "boeuf" << uboeuf;
+
+	uboeuf = ((achat[4] / 5.88) * 113) / 1000;
+	cout << "boeuf" << uboeuf;
+
+}
+
+//void boeuf(double inv, double ach, double )

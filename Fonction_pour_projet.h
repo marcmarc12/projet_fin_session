@@ -39,4 +39,7 @@ void pre_filtrage(string nb[50], int quantite, double tableau[40],
  */
 double Conversion_string(string nb_recu);
 
+void traitement(double inventaire[40], int taille_inventaire, double achat[40],
+		int taille_achat, double vente[40], int taille_vente);
+
 #endif /* FONCTION_POUR_PROJET_H_ */

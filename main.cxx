@@ -97,6 +97,9 @@ int main(int argc, char **argv) {
 				test_affichage(inventaire, taille_inventaire);
 				test_affichage(achat, taille_achat);
 				test_affichage(vente, taille_vente);
+
+				traitement(inventaire, taille_inventaire, achat, taille_achat,
+						vente, taille_vente);
 				break;
 
 			default:
